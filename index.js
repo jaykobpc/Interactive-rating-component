@@ -9,10 +9,12 @@ Form.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
   const outputValue = Form.elements["rating-btn"].value;
-  selectedValueState = outputValue;
 
-  selectedValue.innerText = selectedValueState;
+  if (outputValue) {
+    selectedValueState = outputValue;
+    selectedValue.innerText = selectedValueState;
 
-  ratingForm.classList.add('hide');
-  ratingFeedback.classList.add('show');
+    ratingForm.classList.add("hide");
+    ratingFeedback.classList.add("show");
+  }
 });
