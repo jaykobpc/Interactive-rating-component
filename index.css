@@ -29,6 +29,7 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
     background-color: var(--Very-Dark-Blue);
+    -webkit-tap-highlight-color: transparent;
 }
 
 main {
@@ -67,6 +68,12 @@ button {
     border-radius: 20px;
     max-width: 400px;
     position: relative;
+}
+
+@media (min-width: 375px) {
+    .container {
+        max-width: 80%;
+    }
 }
 
 /** Submit form section **/
