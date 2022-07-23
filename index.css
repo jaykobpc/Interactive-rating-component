@@ -57,10 +57,7 @@ button {
     font-size: 11px;
     text-align: center;
     color: var(--color-primary);
-
-    position: absolute;
-    bottom: 0;
-    height: 30px;
+    padding: 10px 0;
 }
 
 .attribution a {
