@@ -1,0 +1,222 @@
+:root {
+    --mobile-breakpoint: 375px;
+    --color-primary: hsl(25, 97%, 53%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+
+    --paragraph-font-size: 15px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    background-color: var(--Very-Dark-Blue);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 35px);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a,
+h3,
+p,
+button {
+    font-family: inherit;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.attribution a {
+    color: var(--White);
+}
+
+.container {
+    background-color: var(--Dark-Blue);
+    border-radius: 20px;
+    max-width: 400px;
+    position: relative;
+}
+
+/** Submit form section **/
+.container__ratingform {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 25px 30px 25px;
+}
+
+.container__ratingform__img {
+    background-color: #33383d;
+    background-image: url('./images/icon-star.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.container__ratingform__title {
+    color: var(--White);
+    font-size: 26px;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.container__ratingform__text {
+    font-size: var(--paragraph-font-size);
+    color: var(--Light-Grey);
+    margin-bottom: 15px;
+}
+
+.container__ratingform__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0 20px 0;
+}
+
+.container__ratingform__label {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    background-color: #33383d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.container__ratingform__label:hover>span {
+    background-color: var(--Light-Grey);
+    color: var(--White);
+}
+
+.container__ratingform__group input {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container__ratingform__group input:checked+span {
+    background-color: var(--color-primary);
+    color: var(--White);
+}
+
+.container__ratingform__group span {
+    position: absolute;
+    color: var(--Medium-Grey);
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__ratingform__submit {
+    display: block;
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--White);
+    border: none;
+    text-transform: uppercase;
+    height: 45px;
+    border-radius: 25px;
+    font-weight: 700;
+    letter-spacing: 2.35px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/** feedback response section */
+.container__feedback {
+    position: absolute;
+    top: 0;
+    padding: 40px 25px 30px 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    /** default is hidden */
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.container__feedback__img {
+    object-fit: cover;
+    width: 180px;
+    margin: 0 auto;
+}
+
+.container__feedback__badge {
+    background-color: #33383d;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin: 25px 0;
+}
+
+.container__feedback__badge span {
+    font-weight: 300;
+    color: var(--color-primary);
+}
+
+.container__feedback__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--White);
+    margin: 0 0 15px 0;
+}
+
+.container__feedback__text {
+    color: var(--Light-Grey);
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
