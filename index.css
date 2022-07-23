@@ -66,13 +66,13 @@ button {
 .container {
     background-color: var(--Dark-Blue);
     border-radius: 20px;
-    max-width: 400px;
+    width: 400px;
     position: relative;
 }
 
-@media (min-width: 375px) {
+@media (max-width: 375px) {
     .container {
-        max-width: 80%;
+        width: 80%;
     }
 }
 
@@ -112,7 +112,7 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 15px 0 20px 0;
+    margin: 15px 0 25px 0;
 }
 
 .container__ratingform__label {
@@ -125,6 +125,7 @@ button {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin: 0 5px;
     overflow: hidden;
 }
 
