@@ -70,12 +70,6 @@ button {
     position: relative;
 }
 
-@media (max-width: 375px) {
-    .container {
-        width: 80%;
-    }
-}
-
 /** Submit form section **/
 .container__ratingform {
     display: flex;
@@ -227,4 +221,10 @@ button {
     opacity: 1;
     visibility: visible;
     pointer-events: all;
+}
+
+@media (max-width: 375px) {
+    .container {
+        width: 90%;
+    }
 }
